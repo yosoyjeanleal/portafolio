@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean Leal | Desarrollador Full Stack</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#ff6b00;
+    --secondary:#ff8c42;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --gray:#64748b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(15,23,42,.8);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+    background-size:cover;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:var(--secondary);
+}
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.skill{
+    background:#1e293b;
+    padding:12px 20px;
+    border-radius:50px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+.hero h1{
+    font-size:2.5rem;
+}
+
+nav ul{
+    display:none;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">JeanLeal.dev</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#habilidades">Habilidades</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>Hola, soy <span>Jean Leal</span></h1>
+
+<p>
+Desarrollador Full Stack especializado en PHP, MySQL, MVC,
+JWT, APIs REST y aplicaciones empresariales.
+Construyo soluciones modernas, seguras y escalables.
+</p>
+
+<a href="#proyectos" class="btn">Ver Proyectos</a>
+</div>
+</section>
+
+<section id="proyectos">
+<div class="container">
+
+<div class="section-title">
+<h2>Mis Proyectos</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>RapiExpress</h3>
+<p>
+Sistema completo de gestión logística con módulos de clientes,
+paquetes, tracking, pagos y manifiestos.
+</p>
+</div>
+
+<div class="card">
+<h3>Ferredul</h3>
+<p>
+Sistema administrativo MVC con autenticación,
+roles, seguridad y panel de control.
+</p>
+</div>
+
+<div class="card">
+<h3>Inventario Empresarial</h3>
+<p>
+Gestión de productos, proveedores,
+compras, ventas y reportes avanzados.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="habilidades">
+<div class="container">
+
+<div class="section-title">
+<h2>Habilidades</h2>
+</div>
+
+<div class="skills">
+<div class="skill">PHP</div>
+<div class="skill">MySQL</div>
+<div class="skill">PDO</div>
+<div class="skill">MVC</div>
+<div class="skill">JWT</div>
+<div class="skill">JavaScript</div>
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">Bootstrap</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+</div>
+
+</div>
+</section>
+
+<section id="contacto">
+<div class="container">
+
+<div class="section-title">
+<h2>Contacto</h2>
+</div>
+
+<div style="text-align:center">
+<p>Email: jean@example.com</p>
+<p>GitHub: github.com/JeanLeal</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Jean Leal | Todos los derechos reservados
+</footer>
+
+</body>
+</html>
